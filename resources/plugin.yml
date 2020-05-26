@@ -1,0 +1,12 @@
+name: DiscordFrame
+main: me.bertek41.discordframe.DiscordFrame
+version: maven.version
+author: bertek41
+api-version: 1.13
+commands:
+  discordframe:
+    description: Main command of DiscordFrame
+    aliases: [df]
+  discordchat:
+    description: Chat command of DiscordFrame
+    aliases: [dc, dcc]

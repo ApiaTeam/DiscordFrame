@@ -1,0 +1,11 @@
+discord_token: ""
+
+max_messages: 5
+message_length: 40
+
+webhook_player_avatar: true
+webhook_default_avatar: 'https://mcdeyiz.com/images/ApiaTeam.png'
+webhook_avatar_api: 'https://crafatar.com/avatars/<uuid>'
+# Alternative https://crafatar.com/renders/head/<uuid>
+# You can also use <player> for the player name.
+webhook_name: '<player> [from Minecraft]'
