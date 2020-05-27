@@ -112,6 +112,10 @@ public class DiscordFrame extends JavaPlugin implements Listener{
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(!(sender instanceof Player)) return false;
 		Player player = (Player) sender;
+		if(!player.isOp()) {
+			player.sendMessage(color("&cYou don't have permission."));
+			return false;
+		}
 		if(args.length == 0) {
 			player.sendMessage(color("&e/df create <channel_id>"));
 			player.sendMessage(color("&e/df reload"));
