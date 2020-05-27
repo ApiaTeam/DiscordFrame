@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.bertek41</groupId>
   <artifactId>DiscordFrame</artifactId>
-  <version>0.1</version>
+  <version>1.0-BETA</version>
   <name>DiscordFrame</name>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
@@ -33,7 +33,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <outputDirectory>${eclipse.workspace}/3/plugins</outputDirectory>
+              <outputFile>${eclipse.workspace}/3/plugins/${project.name}-${project.version}.jar</outputFile>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <minimizeJar>true</minimizeJar>
               <relocations>
