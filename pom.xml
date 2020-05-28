@@ -40,6 +40,8 @@
                 <relocation>
                   <pattern>co.aikar.taskchain</pattern>
                   <shadedPattern>me.bertek41.discordframe.taskchain</shadedPattern>
+                  <pattern>org.bstats.bukkit</pattern>
+                  <shadedPattern>me.bertek41.discordframe.bstats</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
@@ -124,6 +126,12 @@
       <groupId>co.aikar</groupId>
       <artifactId>taskchain-bukkit</artifactId>
       <version>3.7.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.bstats</groupId>
+      <artifactId>bstats-bukkit-lite</artifactId>
+      <version>1.7</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>

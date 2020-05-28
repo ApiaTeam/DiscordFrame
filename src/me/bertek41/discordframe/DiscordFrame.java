@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
+import org.bstats.bukkit.MetricsLite;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -83,6 +84,7 @@ public class DiscordFrame extends JavaPlugin implements Listener{
 				}
 			})
 		.execute();
+		new MetricsLite(this, 7681);
 	}
 	
 	@Override
