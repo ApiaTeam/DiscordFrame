@@ -75,7 +75,7 @@ public class DiscordFrame extends JavaPlugin implements Listener{
 				return discordIntegration;
 			}).abortIfNull()
 			.syncLast((discordIntegration) -> {
-				getCommand("discordchat").setExecutor(new DiscordChatCommand(discordIntegration, discordIntegration.getJda().getGuilds().get(0)));
+				getCommand("discordchat").setExecutor(new DiscordChatCommand(this, discordIntegration, discordIntegration.getJda().getGuilds().get(0)));
 				if(!database.isSet("data")) return;
 				for(String index : database.getConfigurationSection("data").getKeys(false)) {
 					FrameWall frameWall = new FrameWall(this, taskChainFactory, BlockFace.valueOf(database.getString("data."+index+".face")), getLocationFromString(database.getString("data."+index+".location")), database.getString("data."+index+".channel"));
@@ -263,11 +263,11 @@ public class DiscordFrame extends JavaPlugin implements Listener{
 		return discordIntegration;
 	}
 	
-	public static <T> TaskChain<T> newChain() {
+	public <T> TaskChain<T> newChain() {
         return taskChainFactory.newChain();
     }
 	
-    public static <T> TaskChain<T> newSharedChain(String name) {
+    public <T> TaskChain<T> newSharedChain(String name) {
         return taskChainFactory.newSharedChain(name);
     }
     
